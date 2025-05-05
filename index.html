@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Securin - Your Ride Your Safety Our Priority</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            100: '#E5E7EB',
+                            200: '#D1D5DB',
+                            300: '#9CA3AF',
+                            400: '#6B7280',
+                            500: '#4B5563',
+                            600: '#374151',
+                            700: '#1F2937',
+                            800: '#111827',
+                            900: '#0F172A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+        }
+        .device-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+        .download-btn:hover .icon {
+            transform: translateY(5px);
+        }
+        .dashboard-btn:hover .icon {
+            transform: translateX(5px);
+        }
+        .icon {
+            transition: all 0.3s ease;
+        }
+        body {
+            background-color: #0F172A;
+            font-family: 'DM Sans', sans-serif;
+            color: #E5E7EB;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="bg-dark-800 shadow-sm fixed w-full z-10 border-b border-dark-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="./logo.png" alt="Securin Logo" class="h-20 w-auto mt-2">
+                        <!-- <span class="text-xl font-bold text-indigo-400">Securin</span> -->
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#features" class="text-dark-200 hover:text-indigo-400 px-3 py-2 text-sm font-medium">Features</a>
+                    <a href="#products" class="text-dark-200 hover:text-indigo-400 px-3 py-2 text-sm font-medium">Products</a>
+                    <a href="#solutions" class="text-dark-200 hover:text-indigo-400 px-3 py-2 text-sm font-medium">Solutions</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button class="text-dark-200 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="text-center lg:text-left mb-12 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Your Ride. Your Safety. Our Priority.</h1>
+                    <p class="text-xl text-indigo-200 mb-8 max-w-lg mx-auto lg:mx-0">IoT dengan perpaduan Kecerdasan Buatan (AI) yang dapat menjaga pengendara dan motor nya. </p>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#download" class="download-btn bg-white text-indigo-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium flex items-center justify-center transition duration-300 shadow-lg">
+                            <i class="fab fa-android text-2xl mr-2 icon"></i>
+                            <div>
+                                <div class="text-xs">Download our</div>
+                                <div class="text-lg font-bold">Android App</div>
+                            </div>
+                        </a>
+                        <a href="https://dashboard.securin.cloud" target="_blank" class="dashboard-btn bg-indigo-800 hover:bg-indigo-900 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center transition duration-300 shadow-lg">
+                            <i class="fas fa-tachometer-alt text-xl mr-2 icon"></i>
+                            <div>
+                                <div class="text-xs">Open</div>
+                                <div class="text-lg font-bold">Web Dashboard</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="./securin.jpg" alt="IoT Devices" class="rounded-xl shadow-2xl floating mx-auto w-full max-w-md border-2 border-indigo-400">
+                    <div class="absolute -bottom-6 -left-6 bg-dark-700 rounded-xl p-4 shadow-lg hidden md:block border border-dark-600">
+                        <div class="flex items-center">
+                            <div class="bg-yellow-600 rounded-full p-2 mr-3">
+                                <i class="fas fa-tired text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm text-white">Drowsiness Alert</div>
+                                <div class="text-xs text-dark-300">Take a rest..</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-red-700 rounded-xl p-4 shadow-lg hidden md:block border border-red-500">
+                        <div class="flex items-center">
+                            <div class="bg-red-500 rounded-full p-2 mr-3">
+                                <i class="fas fa-exclamation-triangle text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm text-white">Intruder Detected</div>
+                                <div class="text-xs text-red-100">1 minute ago..</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Powerful Features</h2>
+                <p class="mt-4 max-w-2xl text-xl text-dark-300 mx-auto">Fitur Utama Securin</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-dark-800 p-8 rounded-xl hover:shadow-lg transition duration-300 border border-dark-700">
+                    <div class="bg-indigo-900 bg-opacity-30 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-tired text-indigo-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3 text-white">Pendeteksi Kantuk</h3>
+                    <p class="text-dark-300 text-center">Mengurangi risiko kecelakaan dengan ESP32Cam dan AI untuk memantau tanda-tanda kelelahan pengendara.</p>
+                </div>
+                
+                <div class="bg-dark-800 p-8 rounded-xl hover:shadow-lg transition duration-300 border border-dark-700">
+                    <div class="bg-indigo-900 bg-opacity-30 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-power-off text-indigo-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3 text-white">Kontrol Kendaraan</h3>
+                    <p class="text-dark-300 text-center">Securin dapat mematikan motor ketika motor berada diluar jangkauan pemilik. Pengguna juga dapat mengontrol dari jarak jauh melalui web dashboard atau aplikasi android.</p>
+                </div>
+                
+                <div class="bg-dark-800 p-8 rounded-xl hover:shadow-lg transition duration-300 border border-dark-700">
+                    <div class="bg-indigo-900 bg-opacity-30 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-shield-alt text-indigo-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3 text-white">Pendeteksi Kecelakaan</h3>
+                    <p class="text-dark-300 text-center">Dengan sensor MPU6050, Securin dapat mendeteksi kecelakaan berdasarkan tingkat keparahan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Bukan Hanya Itu</h2>
+                <p class="mt-4 max-w-2xl text-xl text-dark-300 mx-auto">Bukan hanya sekedar monitoring dan AI, Securin juga punya</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div class="device-card bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 border border-dark-600">
+                    <div class="bg-indigo-900 bg-opacity-20 rounded-lg p-4 mb-4 flex justify-center">
+                        <i class="fas fa-grin text-5xl text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Face Recognition</h3>
+                    <p class="text-dark-300 mb-4">Securin mampu mengenali wajah dari pemilik kendaraan, dan mengirimkan foto wajah apabila ada peristiwa mencurigakan.</p>
+                    <a href="#" class="text-indigo-400 font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2 text-sm icon"></i>
+                    </a>
+                </div>
+                
+                <div class="device-card bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 border border-dark-600">
+                    <div class="bg-indigo-900 bg-opacity-20 rounded-lg p-4 mb-4 flex justify-center">
+                        <i class="fas fa-triangle-exclamation text-5xl text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Kontak Darurat</h3>
+                    <p class="text-dark-300 mb-4">Akses langsung menghubungi layanan darurat dalam situasi kritis.</p>
+                    <a href="#" class="text-indigo-400 font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2 text-sm icon"></i>
+                    </a>
+                </div>
+                
+                <div class="device-card bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 border border-dark-600">
+                    <div class="bg-indigo-900 bg-opacity-20 rounded-lg p-4 mb-4 flex justify-center">
+                        <i class="fas fa-map-location-dot text-5xl text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Monitoring GPS</h3>
+                    <p class="text-dark-300 mb-4">Pemantauan langsung lokasi menggunakan Wifi dan kartu SIM.</p>
+                    <a href="#" class="text-indigo-400 font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2 text-sm icon"></i>
+                    </a>
+                </div>
+                
+                <div class="device-card bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 border border-dark-600">
+                    <div class="bg-indigo-900 bg-opacity-20 rounded-lg p-4 mb-4 flex justify-center">
+                        <i class="fas fa-th-large text-5xl text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Aplikasi dan Web Dashboard</h3>
+                    <p class="text-dark-300 mb-4">Sistem ini memberikan kemudahan dalam mengakses lokasi kendaraan kapan saja dimana saja.</p>
+                    <a href="#" class="text-indigo-400 font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2 text-sm icon"></i>
+                    </a>
+                </div>
+
+                <div class="device-card bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 border border-dark-600">
+                    <div class="bg-indigo-900 bg-opacity-20 rounded-lg p-4 mb-4 flex justify-center">
+                        <i class="fas fa-th-large text-5xl text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Whatsapp Bot</h3>
+                    <p class="text-dark-300 mb-4">Securin juga terintegrasi dengan WhatsApp Bot untuk respons cepat.</p>
+                    <a href="#" class="text-indigo-400 font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2 text-sm icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-16 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <img src="./banner_app.png" alt="Mobile App" class="rounded-xl shadow-2xl mx-auto w-full max-w-xs floating border-2 border-indigo-400">
+                </div>
+                <div class="text-center lg:text-left text-white">
+                    <h2 class="text-3xl font-extrabold mb-4">Download Our Mobile App</h2>
+                    <p class="text-xl text-indigo-200 mb-8 max-w-lg mx-auto lg:mx-0">Dapatkan kontrol penuh dari fitur kami untuk kontrol IoT Securin melalui aplikasi Android.</p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#" class="download-btn bg-white text-indigo-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium flex items-center justify-center transition duration-300 shadow-lg">
+                            <i class="fab fa-android text-2xl mr-2 icon"></i>
+                            <div>
+                                <div class="text-xs">Download our</div>
+                                <div class="text-lg font-bold">Mobile Apps</div>
+                            </div>
+                        </a>
+                        <a href="#" class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-10 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center transition duration-300 shadow-lg">
+                            <i class="fas fa-qrcode text-xl mr-2"></i>
+                            <div>
+                                <div class="text-xs">QR Code Sample</div>
+                                <div class="text-lg font-bold">For Android</div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 flex flex-wrap justify-center lg:justify-start gap-4 text-indigo-200">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-300 mr-2"></i>
+                            <span>4.9/5 (5 reviews)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-download mr-2"></i>
+                            <span>10+ downloads</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="py-16 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="text-center lg:text-left mb-12 lg:mb-0">
+                    <h2 class="text-3xl font-extrabold text-white mb-4">Web Dashboard</h2>
+                    <p class="text-xl text-dark-300 mb-8 max-w-lg mx-auto lg:mx-0">Akses perangkat IoT Securin dari browser apa saja, perangkat apa saja, dengan dashboard yang interaktif dan real-time. Tanpa perlu instalasi.</p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://dashboard.securin.cloud" target="_blank" class="dashboard-btn bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center transition duration-300 shadow-lg">
+                            <i class="fas fa-tachometer-alt text-xl mr-2 icon"></i>
+                            <div>
+                                <div class="text-xs">Open</div>
+                                <div class="text-lg font-bold">Web Dashboard</div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="font-bold mb-2 text-white">Dashboard Features:</h3>
+                        <ul class="space-y-2 text-dark-300">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Real-time device monitoring</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Control Vehicle (On/Off)</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Chart and Historical Data</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Detailed Logs and Monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="./banner_web.png" alt="Dashboard" class="rounded-xl shadow-2xl mx-auto w-full max-w-lg border-2 border-indigo-400">
+                    <div class="absolute -bottom-6 -right-6 bg-indigo-600 rounded-xl p-4 shadow-lg hidden md:block border border-dark-700">
+                        <div class="text-white">
+                            <div class="font-bold text-sm mb-1">Dashboard Alert</div>
+                            <div class="text-xs text-indigo-100">Location change in 5 minutes interval</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-800 text-white pt-16 pb-8 border-t border-dark-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-dark-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-dark-400 mb-4 md:mb-0">© 2025 Securin. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-dark-300 hover:text-indigo-400">Privacy Policy</a>
+                    <a href="#" class="text-dark-300 hover:text-indigo-400">Terms of Service</a>
+                    <a href="#" class="text-dark-300 hover:text-indigo-400">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.download-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                btn.querySelector('.icon').style.transform = 'translateY(5px)';
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.querySelector('.icon').style.transform = 'translateY(0)';
+            });
+        });
+        
+        document.querySelectorAll('.dashboard-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                btn.querySelector('.icon').style.transform = 'translateX(5px)';
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.querySelector('.icon').style.transform = 'translateX(0)';
+            });
+        });
+        
+    </script>
+</body>
+</html>
